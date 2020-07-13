@@ -44,13 +44,19 @@ class PostController extends Controller
 
     public function edit($id)
     {
-        //
+        $post =  Post::find($id);
+        return  view('admin.posts.edit' , compact('post'));
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+      $dati = $request->all();
+      $slug = Str::of($dati['title'])->slug('-')->__toString();
+      $dati['slug'] = $slug;
+      $post = Post::find($id);
+      $post->update($dati);
+      return redirect()->route('admin.posts.index');
     }
 
     public function destroy($id)
