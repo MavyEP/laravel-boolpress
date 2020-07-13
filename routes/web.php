@@ -23,4 +23,5 @@ Route::get('/', 'HomeController@index')->name('home');
 //CONTROLLER PER ADMIN (poter   cambiare e gestire argomenti e parti di sito)
 Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware('auth')->group(function () {
       Route::get('/', 'HomeController@index')->name('home');
+      Route::resource('/posts' , 'PostController');
 });
