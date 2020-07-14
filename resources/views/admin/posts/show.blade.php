@@ -15,6 +15,7 @@
             <th>TITLE</th>
             <th>SLUG</th>
             <th>CONTENT</th>
+            <th>CATEGORY</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
               <td>{{ $post->title }}</td>
               <td>{{ $post->slug }}</td>
               <td>{{ $post->content }}</td>
+              <td>{{ $post->category->name ?? ''}}</td>
               </td>
             </tr>
         </tbody>

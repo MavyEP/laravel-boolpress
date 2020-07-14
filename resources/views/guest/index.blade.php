@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,7 +10,7 @@
         <div class="posts text-center">
           <ul class="mt-5 list-group">
             @foreach ($posts as $post)
-              <li class="list-group-item"><a class="badge badge-primary p-2" href="{{route('posts.show' , ['slug'=>$post ->slug])}}">{{ $post->title}}</a></li>
+              <li class="list-group-item"><a class="badge badge-primary p-2 mr-5" href="{{route('posts.show' , ['slug'=>$post ->slug])}}">{{ $post->title}}</a>{{ $post->category->name ?? ''}}</li>
             @endforeach
           </ul>
         </div>

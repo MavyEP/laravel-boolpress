@@ -6,6 +6,7 @@
         <div class="col-md-12 text-center">
           <h1>{{ $post->title }}</h1>
           <p class="list-group-item mt-5">{{ $post->content }}</p>
+          <p>{{ $post->category->name ?? ''}}</p>
         </div>
         <div class="col-md-12 text-right">
             <a class="btn btn-primary" href="{{route('posts.index')}}">Return</a>
