@@ -19,6 +19,11 @@ Auth::routes(['verify' => true]);
 //CONTROLLER PUBBLICO
 Route::get('/', 'HomeController@index')->name('home');
 
+//POST PUBBLICO
+Route::get('/posts', 'PostController@index')->name('posts.index');
+Route::get('/posts/{slug}', 'PostController@show')->name('posts.show');
+
+
 
 //CONTROLLER PER ADMIN (poter   cambiare e gestire argomenti e parti di sito)
 Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware('auth')->group(function () {

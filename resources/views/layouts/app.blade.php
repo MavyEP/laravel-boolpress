@@ -26,6 +26,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Homepage
                 </a>
+                <a class="navbar-brand" href="{{ route('posts.index')}}">
+                    Posts
+                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
