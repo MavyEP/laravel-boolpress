@@ -7,9 +7,9 @@
           <h1>Welcome to our site Mr Guest</h1>
         </div>
         <div class="posts text-center">
-          <ul>
+          <ul class="mt-5 list-group">
             @foreach ($posts as $post)
-              <li><a href="{{route('posts.show' , ['slug'=>$post ->slug])}}">{{ $post->title}}</a></li>
+              <li class="list-group-item"><a class="badge badge-primary p-2" href="{{route('posts.show' , ['slug'=>$post ->slug])}}">{{ $post->title}}</a></li>
             @endforeach
           </ul>
         </div>

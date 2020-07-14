@@ -5,7 +5,7 @@
     <div class="">
         <div class="col-md-12 text-center">
           <h1>{{ $post->title }}</h1>
-          <p>{{ $post->content }}</p>
+          <p class="list-group-item mt-5">{{ $post->content }}</p>
         </div>
         <div class="col-md-12 text-right">
             <a class="btn btn-primary" href="{{route('posts.index')}}">Return</a>
